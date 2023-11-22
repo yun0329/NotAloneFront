@@ -1,8 +1,25 @@
-body {
-  width: min(100%, 390px);
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-width: 390px;
+  min-height: 844px;
+  margin: 10px 10px;
+  overflow-y: scroll;
+  font-family: "BMDOHYEON";
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  font: inherit;
+}
+
+@font-face {
+  font-family: 'BMDOHYEON';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
