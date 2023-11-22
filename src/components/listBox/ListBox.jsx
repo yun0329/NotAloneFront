@@ -6,22 +6,23 @@ import dummy from './data.json';
 
 const female={
     "images":[
-        "여_4.png",
-        "여_4.png",
-        "여_4.png",
-        "여_4.png",
-        "여_4.png",
-        "여_4.png"
+        "women.png",
+        "women.png",
+        "women.png",
+        "women.png",
+        "women.png",
+        "women.png"
     ]
 }
-const male={
+const male=
+{
     "images":[
-        "남.png",
-        "남.png",
-        "남.png",
-        "남.png",
-        "남.png",
-        "남.png"
+        "men.png",
+        "men.png",
+        "men.png",
+        "men.png",
+        "men.png",
+        "men.png"
     ]
 }
 const Wrapper=styled.div`
@@ -42,7 +43,7 @@ border-radius: 30px;
 margin-top:5px;
 vertical-align:bottom;
 `;
-const ImgStyle=styled.div`
+const ImgStyle=styled.img`
 position:absolute;
 top:7%;
 left:20%;
@@ -88,11 +89,14 @@ export default function ListBox(props) {
         <MenuWrapper>
         {/* {menuList.map(menu=> */}
         {(isGender===false?male:female).images.map(img=>{
-                return <Menu>
-                    <ImgStyle src={`${process.env.PUBLIC_URL}/img/${img}`}/>
+                return (
+                <Menu>
+                    <ImgStyle src={`img/${img}`}/>
+                    {/* <TextStyle>{menu.content}</TextStyle> */}
                     <TextStyle>안녕하세요</TextStyle>
                     {/* <TextStyle>{menu.content}</TextStyle> */}
                 </Menu>
+                );
             }) 
         }
         {/* )} */}
