@@ -14,7 +14,8 @@ const female={
         "여_4.png"
     ]
 }
-const male={
+const male=
+{
     "images":[
         "남.png",
         "남.png",
@@ -42,7 +43,7 @@ border-radius: 30px;
 margin-top:5px;
 vertical-align:bottom;
 `;
-const ImgStyle=styled.div`
+const ImgStyle=styled.img`
 position:absolute;
 top:7%;
 left:20%;
@@ -88,11 +89,14 @@ export default function ListBox(props) {
         <MenuWrapper>
         {/* {menuList.map(menu=> */}
         {(isGender===false?male:female).images.map(img=>{
-                return <Menu>
-                    <ImgStyle src={`${process.env.PUBLIC_URL}/img/${img}`}/>
+                return (
+                <Menu>
+                    <ImgStyle src={`../../../public/img/${img}`}/>
+                    {/* <TextStyle>{menu.content}</TextStyle> */}
                     <TextStyle>안녕하세요</TextStyle>
                     {/* <TextStyle>{menu.content}</TextStyle> */}
                 </Menu>
+                );
             }) 
         }
         {/* )} */}
