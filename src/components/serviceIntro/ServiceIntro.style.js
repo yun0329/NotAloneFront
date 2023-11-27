@@ -7,13 +7,13 @@ export const ContainerStyle = styled.div`
   text-align: center;
 `;
 
-export const imageStyle = styled.img`
+export const ImageStyle = styled.img`
   width: auto;
   height: auto;
   margin: 10px;
 `;
 
-export const textBoxStyle = styled.div`
+export const TextBoxStyle = styled.div`
   width: 335px;
   height: 46px;
   border-radius: 30px;
@@ -24,7 +24,7 @@ export const textBoxStyle = styled.div`
   margin: 10px;
 `;
 
-export const textStyle = styled.span`
+export const TextStyle = styled.span`
   color: #000000;
   font-size: 16px;
   font-weight: bold;
