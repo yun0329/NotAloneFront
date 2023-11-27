@@ -34,10 +34,10 @@ export const TextStyle=styled.div`
   z-index:0;
 `;
 export const MenuWrapper=styled.div`
+  width: fit-content;
   position:relative;
-  left: 27%;
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   text-align: center;
 `;
