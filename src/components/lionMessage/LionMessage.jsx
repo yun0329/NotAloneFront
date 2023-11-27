@@ -1,22 +1,18 @@
-import React from 'react';
-import { HeaderStyle, ButtonStyle } from './LionMessage.style';
 import { useNavigate } from 'react-router-dom';
+import { LionImg, LogoTitle, MessageContainer, MessageDiv } from "./LionMessage.style";
+import Button from '../button/Button';
 
-
-const Header = () => {
+export default function LionMessage() {
   const navigate = useNavigate();
 
   return (
-    <HeaderStyle>
-      <ButtonStyle>
-        <img className = "backButton" src={"img/backButtonImage.png"} alt="뒤로가기" onClick={navigate(-1)} />
-      </ButtonStyle>
-      <img className = "logo" src={"img/logo.png"} alt="로고" />
-      <ButtonStyle>
-        <img className = "closeButton" src={"img/closeButton.png"} alt="닫기" onClick={navigate('/main')}/>
-      </ButtonStyle>
-    </HeaderStyle>
+    <>
+      <MessageContainer>
+        <LogoTitle src="img/logoTitle.png"/>
+        <MessageDiv onClick={() => navigate('/serviceInfo')}>서비스 소개 클릭!</MessageDiv>
+        <LionImg src="img/lionBefore.png"/>
+        <Button onClick={() => navigate('/main')}>시작하기</Button>
+      </MessageContainer>
+    </>
   );
-};
-
-export default Header;
+}
