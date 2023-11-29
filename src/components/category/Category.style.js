@@ -13,7 +13,6 @@ export const CategoryStyle = styled.div`
 `;
 
 export const TextStyle = styled.span`
-  color: #000000;
-  font-family: "Do Hyeon; sans-serif";
-  font-size: 32px;
+  color: black;
+  font-size: 24px;
 `;
