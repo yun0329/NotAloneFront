@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HeaderStyle, ButtonStyle } from './LionHeader.style';
 
-const Header = () => {
+const LionHeader = () => {
   const navigate = useNavigate();
   
   const navigateBack = useCallback(() => {
@@ -26,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default LionHeader;
