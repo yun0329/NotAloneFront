@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ToggleContainer = styled.div`
   position: relative;
   margin-top: 15px;
-  left: 47%;
+  left: 75px;
   cursor: pointer;
   margin-bottom:15px;
 
@@ -48,12 +48,3 @@ export const Span2=styled.span`
     z-index:1;
 `;
 
-
-export const Desc = styled.div`
-  //설명 부분의 CSS를 구현
-  text-align: center;
-  margin: 20px;
-`;
-export const Table=styled.div`
-  display:flex;
-`;
