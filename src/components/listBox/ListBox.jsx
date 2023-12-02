@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { ImgStyle, Menu, MenuWrapper, TextStyle } from './ListBox.style';
+import { useState} from 'react';
+import { ToggleContainer, Span1, Span2 } from './Toggle.style';
+import { ImgStyle, Menu, MenuWrapper, TextStyle, Wrapper } from './ListBox.style';
 import React from 'react';
-import Toggle from '../toggle/Toggle';
 import dummy from './data.json';
 
 const female={
     "images":[
         "women.png",
-        "women.png",
+        "women3.png",
         "women.png",
         "women.png",
         "women.png",
@@ -25,42 +25,40 @@ const male=
         "men.png"
     ]
 }
+const ListBox = (props) => {
+  const [isOn, setisOn] = useState(false);
 
-export default function ListBox(props) {
+  const menuList = dummy.sentences.filter(sentence => sentence.category ===props.category);
+  const toggleHandler = () => {
+    setisOn(!isOn)
+    console.log({isOn})
+  };
+  console.log(menuList);
 
-
-    const [isGender, setisGender] = useState(props.gender);
-    const genderHandler = () => {
-        setisGender(!isGender)
-      };
-    const category=props.category;
-    const menuList = dummy.sentences.filter(sentence => sentence.category === category);
-
-
-
-
-//일단 화면 구성만 했음. 기능부분은 주석처리해논 부분 
-{/* <DIV_Box> {items.map(item => <div>item</div>)} </DIV_Box> */}
-    
-  return(
-    <>
-        {/* <Toggle onClick={genderHandler}/> */}
-        <MenuWrapper>
-        {/* {menuList.map(menu=> */}
-        {(isGender===false?male:female).images.map(img=>{
-                return (
-                <Menu>
-                    <ImgStyle src={`img/${img}`}/>
-                    {/* <TextStyle>{menu.content}</TextStyle> */}
-                    <TextStyle>안녕하세요</TextStyle>
-                    {/* <TextStyle>{menu.content}</TextStyle> */}
-                </Menu>
-                );
-            }) 
-        }
-        {/* )} */}
-        </MenuWrapper>
-    
-    </>
+  return (
+    <Wrapper>
+      <ToggleContainer
+        onClick={toggleHandler}
+      >
+        <div className={`toggle-container ${isOn ? "toggle--checked" : null}`}/>
+        <Span1>여자</Span1>
+        <Span2>남자</Span2>
+        <div className={`toggle-circle ${isOn ? "toggle--checked" : null}`}/>
+      </ToggleContainer>
+      {/*off = 남자, on= 여자 */}
+      <MenuWrapper>
+        {menuList.map(sentence=>{
+        return (
+        <Menu>
+            <ImgStyle src={`img/${isOn === false ? male.images[0] : female.images[0]}`} />
+            <TextStyle>{sentence.content}</TextStyle>
+            {/* <ImgStyle src={`img/${isOn === false ? male.images[0] : female.images[0]}`} />
+            <div>{sentence.content}</div> */}
+        </Menu>
+        );    
+      })}
+      </MenuWrapper>
+    </Wrapper>
   );
-}
+};
+export default ListBox;

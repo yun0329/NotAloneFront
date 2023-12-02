@@ -29,3 +29,14 @@ export const NavLink = styled(Link)`
   font-weight: ${({ active }) => (active === 'true' ? 'bold' : 'normal')}; 
   cursor: pointer;
 `;
+
+export const ListBoxWrap = styled.div`
+width: 100%;
+list-style: none;
+display: flex;
+justify-content: space-evenly;
+padding: 0;
+margin: 0;
+  
+`;
+
