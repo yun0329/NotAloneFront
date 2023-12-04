@@ -67,11 +67,9 @@ export const ImgStyle=styled.img`
   z-index:0;
 `;
 export const TextStyle=styled.div`
-  position:absolute;
-  font-size:20px;
-  top:70%;
-  left:15%;
-  z-index:0;
+  font-size:23px;
+  text-align: center;
+  margin-top:70%;
 `;
 export const MenuWrapper=styled.div`
   width: fit-content;
@@ -79,5 +77,4 @@ export const MenuWrapper=styled.div`
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  text-align: center;
 `;

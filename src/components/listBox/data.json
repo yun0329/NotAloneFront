@@ -32,7 +32,7 @@
         "content": "문 앞에 두세요"},
         {"id":10, 
         "category":"delivery",
-        "content": "음식이 잘못왔어요"},
+        "content": "잘못왔어요"},
         {"id":11, 
         "category":"delivery",
         "content": "네"},

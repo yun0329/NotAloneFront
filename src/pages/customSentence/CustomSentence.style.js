@@ -2,7 +2,6 @@ import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const CategoryNavbar = styled.nav`
-  display: flex;
   justify-content: space-around;
   padding: 10px;
   font-family: 'Pretendard-Regular';
