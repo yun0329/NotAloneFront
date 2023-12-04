@@ -6,6 +6,7 @@ export const ToggleContainer = styled.div`
   left: 75px;
   cursor: pointer;
   margin-bottom:15px;
+  font-family: 'Pretendard-Regular';
 
   > .toggle-container {
     width: 200px;

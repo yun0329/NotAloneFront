@@ -11,8 +11,6 @@ const female={
       "women3.png",
       "women.png",
       "women.png",
-      "women.png",
-      "women.png"
   ]
 }
 const dummy={

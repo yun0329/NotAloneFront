@@ -16,11 +16,10 @@ export default function CustomSentence() {
           <NavbarLi><NavLink to="/customSentence/delivery" active={category === 'delivery' ? 'true' : 'false'}>배달 주문</NavLink></NavbarLi>
           <NavbarLi><NavLink to="/customSentence/langBarrier" active={category === 'langBarrier' ? 'true' : 'false'}>언어 장벽</NavLink></NavbarLi>
         </NavbarUl>
+      </CategoryNavbar>
       <MainContainer>
       <ListBox category={category}/>
       </MainContainer>
-      
-      </CategoryNavbar>
     </>
   );
 }

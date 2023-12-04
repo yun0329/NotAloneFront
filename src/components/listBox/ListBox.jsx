@@ -3,7 +3,7 @@ import { ToggleContainer, Span1, Span2 } from './Toggle.style';
 import { ImgStyle, Menu, MenuWrapper, TextStyle, Wrapper } from './ListBox.style';
 import React from 'react';
 import dummy from './data.json';
-
+import axios from 'axios';
 const female={
     "images":[
         "women.png",
@@ -35,6 +35,19 @@ const ListBox = (props) => {
   };
   console.log(menuList);
 
+  //통신
+  // const playAudio=(e)=>{
+  //   axios.get(`https://imnotalone.shop:8090/voice/get?prompt=${e.value}&gender=${isOn === false ? male:female}`)
+  //   .then(function (response) {
+  //        const audioData=response
+  //        return(
+  //         <audio src={audioData}></audio>
+  //        );
+  //   }).catch(function (error) {
+  //       console.log(error);
+  //   });
+
+  // };
   return (
     <Wrapper>
       <ToggleContainer
@@ -49,11 +62,10 @@ const ListBox = (props) => {
       <MenuWrapper>
         {menuList.map(sentence=>{
         return (
+        // <Menu onClick={(e)=>playAudio(e)}>
         <Menu>
             <ImgStyle src={`img/${isOn === false ? male.images[0] : female.images[0]}`} />
             <TextStyle>{sentence.content}</TextStyle>
-            {/* <ImgStyle src={`img/${isOn === false ? male.images[0] : female.images[0]}`} />
-            <div>{sentence.content}</div> */}
         </Menu>
         );    
       })}
