@@ -3,7 +3,7 @@ import { ToggleContainer, Span1, Span2 } from './Toggle.style';
 import { ImgStyle, Menu, MenuWrapper, TextStyle, Wrapper } from './ListBox.style';
 import React from 'react';
 import dummy from './data.json';
-import axios from 'axios';
+//import axios from 'axios';
 const female={
     "images":[
         "women.png",
