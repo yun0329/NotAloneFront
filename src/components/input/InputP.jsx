@@ -1,26 +1,37 @@
-import React from 'react';
-import { OrangeBox, WhiteInputBox, OrangeButton,Button } from './InputP.style';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { OrangeBox, WhiteInputBox, OrangeButton, VerButton, ButtonWrapper } from './InputP.style';
+import Button from '../button/Button';
 
-const input = () => {
+const Input = () => {
+  const navigate = useNavigate();
+
+  const navigateToResult = useCallback(() => {
+    navigate('/result');
+  }, [navigate]);
+
   return (
-    <div>
+    <>
       <OrangeBox>
-        <p style={{ fontSize: '18px', color: 'black'  }}>음성으로 번역하고 싶은 문장을 입력해주세요.</p>
+        <p>음성으로 번역하고 싶은 문장을 입력해주세요.</p>
       </OrangeBox>
       <WhiteInputBox
         type="text"
         placeholder="음성으로 번역하고 싶은 문장을 입력해주세요."
       />
        <OrangeButton>
-        <Button>
-          <p style={{ fontSize: '23px', color: 'black' }}>여자 ver</p>
-        </Button>
-        <Button>
-          <p style={{ fontSize: '23px', color: 'black' }}>남자 ver</p>
-        </Button>
+        <VerButton>
+          <p>여자 ver</p>
+        </VerButton>
+        <VerButton>
+          <p>남자 ver</p>
+        </VerButton>
       </OrangeButton>
-    </div>
+      <ButtonWrapper>
+        <Button onClick={navigateToResult}>변환</Button>
+      </ButtonWrapper>
+    </>
   );
 };
 
-export default input;
+export default Input;
