@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { CategoryNavbar, NavbarLi, NavbarUl, NavLink,ListBoxWrap } from './CustomSentence.style';
+import { CategoryNavbar, NavbarLi, NavbarUl, NavLink } from './CustomSentence.style';
 import LionHeader from '../../components/lionHeader/LionHeader';
 import ListBox from '../../components/listBox/ListBox';
 import { MainContainer } from '../serviceInfo/ServiceInfo.style';
