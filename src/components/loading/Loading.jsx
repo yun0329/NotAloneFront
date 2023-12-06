@@ -2,6 +2,8 @@ import Lottie from "lottie-react";
 import loadingLottie from "./loadingLottie.json";
 import { LionImg } from "../lionMessage/LionMessage.style";
 import {Wrapper,Div,LottieWrapper} from "./Loading.style";
+import lionBeforeImg from '../../assets/img/lionBefore.png';
+
 function Loading() {
   return (
     <Wrapper>
@@ -9,7 +11,7 @@ function Loading() {
         <Lottie animationData={loadingLottie} />
       </LottieWrapper>
       <Div>
-      <LionImg src="img/lionBefore.png"/>
+      <LionImg src={lionBeforeImg} />
       </Div>
     </Wrapper>
   );
