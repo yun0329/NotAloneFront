@@ -7,6 +7,11 @@ export const OrangeBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  p {
+    font-size: 18px; 
+    color: black;
+  }
 `;
 
 export const WhiteInputBox = styled.textarea`
@@ -25,7 +30,7 @@ export const OrangeButton = styled.div`
   width: 100%;
 `;
 
-export const Button = styled.div`
+export const VerButton = styled.div`
   flex: 1;
   height: 66px;
   background-color: orange;
@@ -33,5 +38,13 @@ export const Button = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  p {
+    font-size: 23px;
+    color: black;
+  }
 `;
 
+export const ButtonWrapper = styled.div`
+  margin: 15px 30px;
+`;
