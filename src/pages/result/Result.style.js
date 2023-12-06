@@ -14,6 +14,16 @@ export const LogoTitle = styled.img`
   margin-bottom: 30px;
 `;
 
+export const BeforeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-top: 80px;
+  }
+`;
+
 export const MessageDiv = styled.div`
   width: 250px;
   height: 75px;
@@ -30,5 +40,4 @@ export const MessageDiv = styled.div`
 export const LionImg = styled.img`
   width: 223px;
   height: 223px;
-  
 `;
