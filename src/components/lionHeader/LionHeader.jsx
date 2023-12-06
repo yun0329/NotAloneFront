@@ -1,6 +1,9 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HeaderStyle, ButtonStyle } from './LionHeader.style';
+import backButtonImg from '../../assets/img/backButtonImage.png';
+import logoImg from '../../assets/img/logo.png';
+import closeImg from '../../assets/img/closeButton.png';
 
 const LionHeader = () => {
   const navigate = useNavigate();
@@ -16,11 +19,11 @@ const LionHeader = () => {
   return (
     <HeaderStyle>
       <ButtonStyle>
-        <img className="backButton" src={"img/backButtonImage.png"} alt="뒤로가기" onClick={navigateBack} />
+        <img className="backButton" src={backButtonImg} alt="뒤로가기" onClick={navigateBack} />
       </ButtonStyle>
-      <img className="logo" src={"img/logo.png"} alt="로고" />
+      <img className="logo" src={logoImg} alt="로고" />
       <ButtonStyle>
-        <img className="closeButton" src={"img/closeButton.png"} alt="닫기" onClick={navigateToMain} />
+        <img className="closeButton" src={closeImg} alt="닫기" onClick={navigateToMain} />
       </ButtonStyle>
     </HeaderStyle>
   );
