@@ -4,6 +4,8 @@ import Loading from '../../components/loading/Loading';
 import { MainContainer } from '../serviceInfo/ServiceInfo.style';
 import { BeforeContainer, LogoTitle, MessageContainer, MessageDiv } from './Result.style';
 import { LionImg } from '../../components/lionMessage/LionMessage.style';
+import logoTitleImg from '../../assets/img/logoTitle.png';
+import lionAfterImg from '../../assets/img/lionAfter.png';
 
 export default function Result() {
   const [response, setResponse] = useState(null);
@@ -23,11 +25,11 @@ export default function Result() {
       <Header />
       <MainContainer>
         <MessageContainer>
-          <LogoTitle src="img/logoTitle.png" />
+          <LogoTitle src={logoTitleImg} />
           {response ? (
             <BeforeContainer>
               <MessageDiv>음성 변환 완료!</MessageDiv>
-              <LionImg src='img/lionAfter.png'/>
+              <LionImg src={lionAfterImg} />
             </BeforeContainer>
           ) : (
             <>
