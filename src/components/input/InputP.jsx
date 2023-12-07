@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { OrangeBox, WhiteInputBox, OrangeButton, VerButton, ButtonWrapper } from './InputP.style';
 import Button from '../button/Button';
-
+import { handleMenuItemClick } from '../api/api';
 const Input = () => {
   const navigate = useNavigate();
 
