@@ -5,7 +5,7 @@ import LionMessage from '../../components/lionHeader/LionHeader';
 import { MainContainer } from '../serviceInfo/ServiceInfo.style';
 import { QuickContainer, QuickHeader, UserBtnContainer, Menu, MenuWrapper, ImgStyle, TextStyle } from './Main.style';
 import CATEGORY_DATA from '../../constants/categoryData'; 
-
+import {handleMenuItemClick} from '../../components/api/api';
 export default function Main() {
   const navigate = useNavigate();
   const mainCategory = CATEGORY_DATA.alone;
@@ -30,7 +30,7 @@ export default function Main() {
         <MenuWrapper>
           {menuList.map((sentence) => {
             return (
-              <Menu key={sentence.id}>
+              <Menu key={sentence.id} onClick={() => handleMenuItemClick(sentence.id, sentence.content)}>
                 <ImgStyle src={sentence.img.w} />
                 <TextStyle>{sentence.content}</TextStyle>
               </Menu>

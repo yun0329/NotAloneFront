@@ -43,6 +43,7 @@ export const VerButton = styled.div`
     font-size: 23px;
     color: black;
   }
+
 `;
 
 export const ButtonWrapper = styled.div`
