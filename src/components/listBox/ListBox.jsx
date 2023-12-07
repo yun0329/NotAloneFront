@@ -38,7 +38,7 @@ const ListBox = (props) => {
           const selectedImage = isOn ? images?.w : images?.m;
 
           return (
-            <Menu key={sentence.id} onClick={() => handleMenuItemClick(sentence.id, sentence.content,isOn)}>
+            <Menu key={sentence.id} onClick={() => handleMenuItemClick(sentence.content,isOn)}>
               <ImgStyle src={selectedImage} />
               <TextStyle>{sentence.content}</TextStyle>
             </Menu>
